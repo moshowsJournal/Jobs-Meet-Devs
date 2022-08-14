@@ -11,9 +11,9 @@ function App() {
       <GlobalStyles />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/" element={<AboutUs />} />
-        <Route path="/" element={<Community />} />
-        <Route path="/" element={<ContactUs />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/community" element={<Community />} />
+        <Route path="/contact" element={<ContactUs />} />
       </Routes>
     </div>
   );
