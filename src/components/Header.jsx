@@ -4,6 +4,38 @@ import { Link } from 'react-router-dom'
 import logo from '../assets/pngs/jobsMeetDevsLogo.png'
 
 const Header = () => {
+    const [home, setHome] = useState(true)
+    const [about, setAbout] = useState(false)
+    const [community, setCommunity] = useState(false)
+    const [contact, setContact] = useState(false)
+
+    const homeHandler = () => {
+        setHome(true)
+        setAbout(false)
+        setCommunity(false)
+        setContact(false)
+    }
+
+    const aboutHandler = () => {
+        setHome(false)
+        setAbout(true)
+        setCommunity(false)
+        setContact(false)
+    }
+
+    const communityHandler = () => {
+        setHome(false)
+        setAbout(false)
+        setCommunity(true)
+        setContact(false)
+    }
+
+    const contactHandler = () => {
+        setHome(false)
+        setAbout(false)
+        setCommunity(false)
+        setContact(true)
+    }
     
     return (
         <MainHeader>
@@ -14,22 +46,22 @@ const Header = () => {
                     </Link>
                 </NavLogo>
                 <NavList>
-                    <li className='active'>
+                    <li className={home && 'active'} onClick={homeHandler}>
                         <Link to="/"  >
                         Home
                         </Link>
                     </li>
-                    <li>
+                    <li className={about && 'active'} onClick={aboutHandler}>
                         <Link to="/about">
                         About Us
                         </Link>
                     </li>
-                    <li>
+                    <li className={community && 'active'} onClick={communityHandler}>
                         <Link to="/community" >
                         Community
                         </Link>
                     </li>
-                    <li>
+                    <li className={contact && 'active'} onClick={contactHandler}>
                         <Link to="/contact">
                         Contact Us
                         </Link>
