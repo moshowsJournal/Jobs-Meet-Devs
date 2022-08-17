@@ -1,62 +1,38 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../assets/pngs/jobsMeetDevsLogo.png";
 
 const Header = () => {
-  const [home, setHome] = useState(true);
-  const [about, setAbout] = useState(false);
-  const [community, setCommunity] = useState(false);
-  const [contact, setContact] = useState(false);
-
-  const homeHandler = () => {
-    setHome(true);
-    setAbout(false);
-    setCommunity(false);
-    setContact(false);
-  };
-
-  const aboutHandler = () => {
-    setHome(false);
-    setAbout(true);
-    setCommunity(false);
-    setContact(false);
-  };
-
-  const communityHandler = () => {
-    setHome(false);
-    setAbout(false);
-    setCommunity(true);
-    setContact(false);
-  };
-
-  const contactHandler = () => {
-    setHome(false);
-    setAbout(false);
-    setCommunity(false);
-    setContact(true);
-  };
-
+  
   return (
     <MainHeader>
       <Nav>
         <NavLogo>
-          <Link to="/">
+          <NavLink to="/">
             <img src={logo} alt="Logo" />
-          </Link>
+          </NavLink>
         </NavLogo>
         <NavList>
-          <li className={home && "active"} onClick={homeHandler}>
-            <Link to="/">Home</Link>
+          <li>
+            <NavLink to="/" activeClassName="active">
+              Home
+            </NavLink>
           </li>
-          <li className={about && "active"} onClick={aboutHandler}>
-            <Link to="/about">About Us</Link>
+          <li>
+            <NavLink to="/about" activeClassName="active">
+              About Us
+            </NavLink>
           </li>
-          <li className={community && "active"} onClick={communityHandler}>
-            <Link to="/community">Community</Link>
+          <li>
+            <NavLink to="/community" activeClassName="active">
+              Community
+            </NavLink>
           </li>
-          <li className={contact && "active"} onClick={contactHandler}>
-            <Link to="/contact">Contact Us</Link>
+          <li>
+            <NavLink to="/contact" activeClassName="active">
+              Contact Us
+            </NavLink>
           </li>
         </NavList>
       </Nav>
@@ -91,15 +67,11 @@ const NavList = styled.ul`
   align-items: center;
   li {
     margin-left: 3rem;
-    color: #383333;
     a {
-      color: inherit;
+      color: #383333;
       font-weight: bold;
-    }
-    &.active {
-      color: #3a7cec;
-      a {
-        color: inherit;
+      &.active {
+          color: #3a7cec;
       }
     }
   }
