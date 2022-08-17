@@ -23,7 +23,7 @@ const Partner = () => {
 
 const Section = styled.section`
   width: 100%;
-  min-height: 50vh;
+  min-height: 40vh;
 `;
 
 const Container = styled.div`
@@ -32,7 +32,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   gap: 3rem;
-  padding: 7rem 0;
+  padding: 5rem 0;
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
   article {
     width: 47%;

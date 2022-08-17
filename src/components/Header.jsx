@@ -94,12 +94,12 @@ const NavList = styled.ul`
     color: #383333;
     a {
       color: inherit;
+      font-weight: bold;
     }
     &.active {
       color: #3a7cec;
       a {
         color: inherit;
-        font-weight: bold;
       }
     }
   }
