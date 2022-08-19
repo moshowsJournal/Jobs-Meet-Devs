@@ -1,4 +1,6 @@
 import AFirstSection from "../components/AFirstSection";
+import ASecondSection from "../components/ASecondSection";
+import AThirdSection from "../components/AThirdSection";
 import Header from "../components/Header";
 
 const AboutUs = () => {
@@ -6,6 +8,8 @@ const AboutUs = () => {
         <div>
             <Header/>
             <AFirstSection/>
+            <ASecondSection/>
+            <AThirdSection/>
         </div>
     );
 };
