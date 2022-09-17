@@ -6,11 +6,11 @@ const HomeHero = () => {
     <Section>
       <Container>
         <Text>
-          <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut</h1>
+          <h1>Finding High-Value Nigerian Tech Talents Just Got Easy</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et
-            vestibulum malesuada tortor elementum ornare turpis at tempor amet.
-            Sit dui amet, leo dia
+            Jobs Meet Devs connects companies with top vetted developers,
+            designers, product managers, and project managers. Leave the tech
+            headache to us and focus on other things that bring the big bucks
           </p>
         </Text>
         <Image>
@@ -45,6 +45,7 @@ const Text = styled.article`
     font-size: 2.5rem;
     line-height: 50px;
     margin-bottom: 2rem;
+    color: ${(props) => props.theme.primary};
   }
   p {
     font-size: 1.5rem;

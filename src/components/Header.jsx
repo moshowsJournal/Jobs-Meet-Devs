@@ -4,7 +4,6 @@ import { NavLink } from "react-router-dom";
 import logo from "../assets/pngs/jobsMeetDevsLogo.png";
 
 const Header = () => {
-  
   return (
     <MainHeader>
       <Nav>
@@ -71,7 +70,7 @@ const NavList = styled.ul`
       color: #383333;
       font-weight: bold;
       &.active {
-          color: #3a7cec;
+        color: ${(props) => props.theme.primary};
       }
     }
   }
