@@ -44,10 +44,12 @@ const Text = styled.article`
     font-size: 2.5rem;
     line-height: 48.5px;
     margin-bottom: 2rem;
+    color: ${(props) => props.theme.primary};
   }
 
   p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    color: ${(props) => props.theme.text2};
     line-height: 30px;
   }
 `;

@@ -41,6 +41,7 @@ const Header = () => {
 
 const MainHeader = styled.header`
   position: fixed;
+  z-index: 5;
   top: 0;
   left: 0;
   width: 100%;
@@ -67,7 +68,7 @@ const NavList = styled.ul`
   li {
     margin-left: 3rem;
     a {
-      color: #383333;
+      color: ${(props) => props.theme.text1};
       font-weight: bold;
       &.active {
         color: ${(props) => props.theme.primary};
