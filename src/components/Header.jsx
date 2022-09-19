@@ -1,17 +1,16 @@
-import { useState } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import logo from "../assets/pngs/jobsMeetDevsLogo.png";
+import Logo from "./Logo";
 
 const Header = () => {
   return (
     <MainHeader>
       <Nav>
-        <NavLogo>
+        <div>
           <NavLink to="/">
-            <img src={logo} alt="Logo" />
+            <Logo/>
           </NavLink>
-        </NavLogo>
+        </div>
         <NavList>
           <li>
             <NavLink to="/" activeClassName="active">
@@ -60,7 +59,6 @@ const Nav = styled.nav`
   align-items: center;
 `;
 
-const NavLogo = styled.div``;
 
 const NavList = styled.ul`
   display: flex;
