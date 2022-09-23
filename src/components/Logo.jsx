@@ -16,8 +16,8 @@ const Logo = () => {
 };
 
 const StyledLogo = styled.div`
-min-width: 12rem;
-position: relative;
+  min-width: 12rem;
+  position: relative;
   display: flex;
   align-items: center;
   .logo-image {
@@ -25,11 +25,11 @@ position: relative;
     width: 8rem;
     height: 4.5rem;
     img {
-        position: absolute;
-        top: 6px;
-        left: -20px;
-        width: 100%;
-        height: 100%;
+      position: absolute;
+      top: 6px;
+      left: -20px;
+      width: 100%;
+      height: 100%;
     }
   }
   .logo-text {
@@ -38,7 +38,6 @@ position: relative;
     display: flex;
     flex-direction: column;
     span {
-        font-weight: bold;
       color: ${(props) => props.theme.text1};
     }
   }

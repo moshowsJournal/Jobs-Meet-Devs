@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
+
 const GlobalStyles = createGlobalStyle`
 * {
     box-sizing: border-box;
@@ -8,7 +9,6 @@ const GlobalStyles = createGlobalStyle`
 }
 
 body {
-    font-family: "GT Walsheim Pro Regular";
     background-color: #fff;
 }
 
@@ -21,5 +21,8 @@ ul {
 }
 
 `;
+
+// font-family: 'GTWalsheimPro', sans-serif;
+// font-family: 'WhyteInktrap', sans-serif;
 
 export default GlobalStyles

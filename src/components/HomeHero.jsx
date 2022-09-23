@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import homeHero1 from "../assets/pngs/homeHero1.png";
-import homeHero2 from "../assets/pngs/homeHero2.png";
-import homeHeroTag from "../assets/svgs/homeHeroTag.svg";
+import { motion } from "framer-motion";
 
 
 const HomeHero = () => {
@@ -19,11 +17,6 @@ const HomeHero = () => {
             <a href="#" className="homeHeroLink">Connect me with a top tech talent</a>
           </div>
         </Text>
-        <Image>
-          <img src={homeHero1} alt="hero" className="homeHero1" />
-          <img src={homeHero2} alt="hero" className="homeHero2" />
-          <img src={homeHeroTag} alt="tag" className="homeHeroTag" />
-        </Image>
       </Container>
     </Section>
   );
@@ -32,10 +25,9 @@ const HomeHero = () => {
 const Section = styled.section`
   margin-top: 12vh;
   width: 100%;
-  /* min-height: 85vh; */
 `;
 
-const Container = styled.div`
+const Container = styled(motion.div)`
   width: 85%;
   margin: 0 auto;
   display: flex;
@@ -49,7 +41,7 @@ const Container = styled.div`
   }
 `;
 
-const Text = styled.article`
+const Text = styled(motion.article)`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -78,26 +70,5 @@ const Text = styled.article`
   }
 `;
 
-const Image = styled.article`
-overflow: hidden;
-position: relative;
-img {
-  position: absolute;
-}
-.homeHero1 {
-  z-index: 1;
-  bottom: 2rem;
-}
-.homeHero2 {
-  top: 2rem;
-  right: 6rem;
-}
-.homeHeroTag {
-  z-index: 2;
-  bottom: 4rem;
-  right: 4rem;
-}
-
-`;
 
 export default HomeHero;

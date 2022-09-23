@@ -1,3 +1,4 @@
+import './App.css'
 import GlobalStyles from "./styles/GlobalStyles";
 import { ThemeProvider } from "styled-components";
 import { colors } from "./styles/Colors";

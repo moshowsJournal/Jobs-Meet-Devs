@@ -8,7 +8,7 @@ const Header = () => {
       <Nav>
         <div>
           <NavLink to="/">
-            <Logo/>
+            <Logo />
           </NavLink>
         </div>
         <NavList>
@@ -39,6 +39,8 @@ const Header = () => {
 };
 
 const MainHeader = styled.header`
+  font-size: 16px;
+  font-family: "GTWalsheimPro", sans-serif;
   position: fixed;
   z-index: 5;
   top: 0;
@@ -59,7 +61,6 @@ const Nav = styled.nav`
   align-items: center;
 `;
 
-
 const NavList = styled.ul`
   display: flex;
   align-items: center;
@@ -67,8 +68,8 @@ const NavList = styled.ul`
     margin-left: 3rem;
     a {
       color: ${(props) => props.theme.text1};
-      font-weight: bold;
       &.active {
+        font-weight: bold;
         color: ${(props) => props.theme.primary};
       }
     }

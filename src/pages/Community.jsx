@@ -1,9 +1,7 @@
-import ComFirstSec from "../components/ComFirstSec";
-
 const Community = () => {
     return (
         <> 
-          <ComFirstSec/> 
+          <h1>COMMUNITY</h1> 
         </>
     );
 };
