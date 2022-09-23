@@ -1,20 +1,31 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-
 const HomeHero = () => {
   return (
     <Section>
       <Container>
         <Text>
-          <h1>Finding High-Value Nigerian Tech Talents Just Got Easy</h1>
+          <Hide>
+            <h1>
+              Finding <span>High-Value</span>
+            </h1>
+          </Hide>
+          <Hide>
+            <h1> Nigerian Tech Talents</h1>
+          </Hide>
+          <Hide>
+            <h1>Just Got Easy</h1>
+          </Hide>
           <p>
             Jobs Meet Devs connects companies with top vetted developers,
             designers, product managers, and project managers. Leave the tech
             headache to us and focus on other things that bring the big bucks
           </p>
           <div>
-            <a href="#" className="homeHeroLink">Connect me with a top tech talent</a>
+            <a href="#" className="homeHeroCTA">
+              Connect me
+            </a>
           </div>
         </Text>
       </Container>
@@ -28,41 +39,47 @@ const Section = styled.section`
 `;
 
 const Container = styled(motion.div)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 85%;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 5rem;
   padding: 2.5rem 0;
-  border-bottom: 0.5px solid rgba(0,0,0,0.1);
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
   article {
-    width: 47%;
-    min-height: 77vh;
+    width: 60%;
+    min-height: 75vh;
   }
 `;
 
 const Text = styled(motion.article)`
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   h1 {
+    font-family: "WhyteInktrap", sans-serif;
     font-size: 2.5rem;
     line-height: 50px;
-    margin-bottom: 2rem;
-    color: ${(props) => props.theme.primary};
+    color: ${(props) => props.theme.text1};
+    span {
+      color: ${(props) => props.theme.secondary};
+    }
   }
   p {
+    font-family: "Open Sans", sans-serif;
     font-size: 1.2rem;
     line-height: 30px;
-    margin-bottom: 4rem;
+    margin: 2rem 0 4rem;
     color: ${(props) => props.theme.text2};
   }
   div {
-    .homeHeroLink {
+    .homeHeroCTA {
       background-color: ${(props) => props.theme.primary};
       padding: 1.3rem 2rem;
       border-radius: 1rem;
       font-size: 1.1rem;
+      font-family: "GTWalsheimPro", sans-serif;
       color: #fff;
       width: 27rem;
       height: 4.5rem;
@@ -70,5 +87,8 @@ const Text = styled(motion.article)`
   }
 `;
 
+const Hide = styled.div`
+  overflow: hidden;
+`
 
 export default HomeHero;

@@ -21,7 +21,7 @@ ul {
 }
 
 `;
-
+// font-family: 'Open Sans', sans-serif;
 // font-family: 'GTWalsheimPro', sans-serif;
 // font-family: 'WhyteInktrap', sans-serif;
 
