@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import CtaButton from "./CtaButton";
 
 const HomeHero = () => {
   return (
@@ -17,16 +18,16 @@ const HomeHero = () => {
           <Hide>
             <h1>Just Got Easy</h1>
           </Hide>
-          <p>
-            Jobs Meet Devs connects companies with top vetted developers,
-            designers, product managers, and project managers. Leave the tech
-            headache to us and focus on other things that bring the big bucks
-          </p>
-          <div>
-            <a href="#" className="homeHeroCTA">
-              Connect me
-            </a>
-          </div>
+          <Hide>
+            <p>
+              Jobs Meet Devs connects companies with top vetted developers,
+              designers, product managers, and project managers. Leave the tech
+              headache to us and focus on other things that bring the big bucks
+            </p>
+          </Hide>
+          <Hide>
+            <CtaButton href="#">Connect Me</CtaButton>
+          </Hide>
         </Text>
       </Container>
     </Section>
@@ -52,6 +53,10 @@ const Container = styled(motion.div)`
   }
 `;
 
+const Hide = styled.div`
+  overflow: hidden;
+`;
+
 const Text = styled(motion.article)`
   text-align: center;
   display: flex;
@@ -73,22 +78,6 @@ const Text = styled(motion.article)`
     margin: 2rem 0 4rem;
     color: ${(props) => props.theme.text2};
   }
-  div {
-    .homeHeroCTA {
-      background-color: ${(props) => props.theme.primary};
-      padding: 1.3rem 2rem;
-      border-radius: 1rem;
-      font-size: 1.1rem;
-      font-family: "GTWalsheimPro", sans-serif;
-      color: #fff;
-      width: 27rem;
-      height: 4.5rem;
-    }
-  }
 `;
-
-const Hide = styled.div`
-  overflow: hidden;
-`
 
 export default HomeHero;

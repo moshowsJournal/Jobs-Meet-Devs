@@ -5,7 +5,7 @@ const Partner = () => {
       <Section>
         <Container>
           <Text>
-            <h1>Our esteemed partners</h1>
+            <h1>Why Companies love us</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor nec
               arcu id lacus. Sed duis et diam.
@@ -41,6 +41,7 @@ const Container = styled.div`
 
 const Text = styled.article`
   h1 {
+    font-family: "WhyteInktrap", sans-serif;
     font-size: 2.5rem;
     line-height: 48.5px;
     margin-bottom: 2rem;
