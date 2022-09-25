@@ -75,9 +75,8 @@ const Container = styled(motion.div)`
   }
 `;
 
-
 const Cards = styled(motion.div)`
-margin-top:2rem ;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -88,6 +87,5 @@ margin-top:2rem ;
     gap: 2rem;
   }
 `;
-
 
 export default BuildSection;

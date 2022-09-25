@@ -13,9 +13,9 @@ const WorksCard = ({ image, title, description }) => {
   );
 };
 
-const Card = styled(motion.div)`
+const Card = styled(motion.article)`
   width: 18.3rem;
-  height: 21rem;
+  height: 22rem;
   padding: 3rem;
   border: 1px solid #e7e9eb;
   border-radius: 8px;

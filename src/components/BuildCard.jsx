@@ -13,7 +13,7 @@ const BuildCard = ({ image, title, description }) => {
   );
 };
 
-const Card = styled(motion.div)`
+const Card = styled(motion.article)`
   width: 28rem;
   height: 29.5rem;
   padding: 2rem;
