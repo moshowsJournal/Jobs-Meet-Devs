@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import CtaButton from "./CtaButton";
+import { Hide } from "../styles/Style";
 
 const HomeHero = () => {
   return (
@@ -53,10 +54,6 @@ const Container = styled(motion.div)`
   }
 `;
 
-const Hide = styled.div`
-  overflow: hidden;
-`;
-
 const Text = styled(motion.article)`
   text-align: center;
   display: flex;
@@ -74,7 +71,6 @@ const Text = styled(motion.article)`
   p {
     font-family: "Open Sans", sans-serif;
     font-size: 1.2rem;
-    line-height: 30px;
     margin: 2rem 0 4rem;
     color: ${(props) => props.theme.text2};
   }

@@ -1,3 +1,4 @@
+import BuildSection from "../components/BuildSection";
 import HomeHero from "../components/HomeHero";
 import Partner from "../components/Partner";
 
@@ -6,6 +7,7 @@ const Home = () => {
         <> 
            <HomeHero/>
            <Partner/>
+           <BuildSection/>
         </>
     );
 };

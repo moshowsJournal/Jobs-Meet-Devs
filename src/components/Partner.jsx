@@ -51,7 +51,6 @@ const Text = styled.article`
   p {
     font-size: 1.2rem;
     color: ${(props) => props.theme.text2};
-    line-height: 30px;
   }
 `;
 
