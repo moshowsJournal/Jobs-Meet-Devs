@@ -3,32 +3,44 @@ import { motion } from "framer-motion";
 import CtaButton from "./CtaButton";
 import { Hide } from "../styles/Style";
 
+const textAnimate = {
+  hide: {
+    y: 50,
+    opacity: 0,
+  },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      bounce: 0.2,
+      duration: 1.5,
+    },
+  },
+};
 const HomeHero = () => {
   return (
     <Section>
       <Container>
-        <Text>
-          <Hide>
-            <h1>
-              Finding <span>High-Value</span>
-            </h1>
-          </Hide>
-          <Hide>
-            <h1> Nigerian Tech Talents</h1>
-          </Hide>
-          <Hide>
-            <h1>Just Got Easy</h1>
-          </Hide>
-          <Hide>
-            <p>
-              Jobs Meet Devs connects companies with top vetted developers,
-              designers, product managers, and project managers. Leave the tech
-              headache to us and focus on other things that bring the big bucks
-            </p>
-          </Hide>
-          <Hide>
-            <CtaButton href="#">Connect Me</CtaButton>
-          </Hide>
+        <Text
+          initial="hide"
+          whileInView={"show"}
+          viewport={{once:true,amount: 0.5}}
+          transition={{ staggerChildren: 0.5 }}
+        >
+          <motion.h1 variants={textAnimate}>
+            Finding <span>High-Value</span>
+          </motion.h1>
+          <motion.h1 variants={textAnimate}> Nigerian Tech Talents</motion.h1>
+          <motion.h1 variants={textAnimate}>Just Got Easy</motion.h1>
+          <motion.p variants={textAnimate}>
+            Jobs Meet Devs connects companies with top vetted developers,
+            designers, product managers, and project managers. Leave the tech
+            headache to us and focus on other things that bring the big bucks
+          </motion.p>
+          <CtaButton href="#" animation={textAnimate}>
+            Connect Me
+          </CtaButton>
         </Text>
       </Container>
     </Section>

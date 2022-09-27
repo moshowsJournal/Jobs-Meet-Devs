@@ -82,6 +82,7 @@ const FormContainer = styled(motion.div)`
   }
 
   #message {
+    resize: none;
     width: 100%;
     height: 14rem;
   }

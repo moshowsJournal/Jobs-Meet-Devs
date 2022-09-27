@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-const CtaButton = ({ href, children }) => {
+const CtaButton = ({ href, children, animation }) => {
   return (
     <Div>
-      <a href={href} className="ctaBtn">
+      <motion.a variants={animation} href={href} className="ctaBtn">
         {children}
-      </a>
+      </motion.a>
     </Div>
   );
 };

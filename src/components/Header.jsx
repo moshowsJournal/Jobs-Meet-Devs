@@ -1,11 +1,29 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import Logo from "./Logo";
+
+
+const headerAnimation = {
+  hide: {
+    opacity: 0,
+    y: -100,
+  },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      bounce: 0.2,
+      duration: 1.5,
+    },
+  },
+};
 
 const Header = () => {
   return (
     <MainHeader>
-      <Nav>
+      <Nav variants={headerAnimation} initial="hide" animate="show">
         <div>
           <NavLink to="/">
             <Logo />
@@ -53,7 +71,7 @@ const MainHeader = styled.header`
   box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
 `;
 
-const Nav = styled.nav`
+const Nav = styled(motion.nav)`
   width: 85%;
   margin: 0 auto;
   display: flex;
