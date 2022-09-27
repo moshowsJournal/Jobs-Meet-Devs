@@ -43,13 +43,12 @@ const Text = styled.article`
   h1 {
     font-family: "WhyteInktrap", sans-serif;
     font-size: 2.5rem;
-    line-height: 48.5px;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     color: ${(props) => props.theme.primary};
   }
 
   p {
-    font-size: 1.2rem;
+    font-family: "Open Sans", sans-serif;
     color: ${(props) => props.theme.text2};
   }
 `;
