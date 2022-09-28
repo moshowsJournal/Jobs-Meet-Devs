@@ -1,20 +1,41 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import { textAnimate, imageAnimate } from "../animation";
 
 const Partner = () => {
     return (
       <Section>
         <Container>
-          <Text>
-            <h1>Why Companies love us</h1>
-            <p>
+          <Text
+            initial="hide"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.8 }}
+            transition={{ staggerChildren: 0.5 }}
+          >
+            <motion.h1 variants={textAnimate}>Why Companies love us</motion.h1>
+            <motion.p variants={textAnimate}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor nec
               arcu id lacus. Sed duis et diam.
-            </p>
+            </motion.p>
           </Text>
-          <Images>
-            <div className="partner-image"></div>
-            <div className="partner-image"></div>
-            <div className="partner-image"></div>
+          <Images
+            initial="hide"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.8 }}
+            transition={{ staggerChildren: 0.5 }}
+          >
+            <motion.div
+              variants={imageAnimate}
+              className="partner-image"
+            ></motion.div>
+            <motion.div
+              variants={imageAnimate}
+              className="partner-image"
+            ></motion.div>
+            <motion.div
+              variants={imageAnimate}
+              className="partner-image"
+            ></motion.div>
           </Images>
         </Container>
       </Section>
@@ -39,7 +60,7 @@ const Container = styled.div`
   }
 `;
 
-const Text = styled.article`
+const Text = styled(motion.article)`
   h1 {
     font-family: "WhyteInktrap", sans-serif;
     font-size: 2.5rem;
@@ -53,7 +74,7 @@ const Text = styled.article`
   }
 `;
 
-const Images = styled.article`
+const Images = styled(motion.article)`
 display: flex;
 gap: 2rem;
   .partner-image {

@@ -1,23 +1,9 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import CtaButton from "./CtaButton";
-import { Hide } from "../styles/Style";
+import { textAnimate } from "../animation";
 
-const textAnimate = {
-  hide: {
-    y: 50,
-    opacity: 0,
-  },
-  show: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      type: "spring",
-      bounce: 0.2,
-      duration: 1.5,
-    },
-  },
-};
+
 const HomeHero = () => {
   return (
     <Section>
