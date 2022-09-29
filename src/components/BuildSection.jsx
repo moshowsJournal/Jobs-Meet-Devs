@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { Hide } from "../styles/Style";
+import { textAnimate } from "../animation";
 import BuildCard from "./BuildCard";
 import fullStack from "../assets/pngs/fullStack.png";
 import webDevs from "../assets/pngs/webDevs.png";
@@ -9,16 +9,21 @@ const BuildSection = () => {
   return (
     <Section>
       <Container>
-        <Hide>
-          <h1 className="head">Build Your Team</h1>
-        </Hide>
-        <Hide>
-          <p className="subhead">
+        <motion.div
+          initial="hide"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ staggerChildren: 0.5 }}
+        >
+          <motion.h1 variants={textAnimate} className="head">
+            Build Your Team
+          </motion.h1>
+          <motion.p variants={textAnimate} className="subhead">
             Whether you're building a team from scratch or you need help closing
             that one hard to fill position. We connect the best, tested, and
             certified talents to you to meet your business needs.
-          </p>
-        </Hide>
+          </motion.p>
+        </motion.div>
         <Cards>
           <div className="card">
             <BuildCard

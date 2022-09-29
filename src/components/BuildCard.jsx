@@ -1,14 +1,24 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { textAnimate, imageAnimate } from "../animation";
 
 const BuildCard = ({ image, title, description }) => {
   return (
-    <Card>
+    <Card
+      initial="hide"
+      whileInView={"show"}
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ staggerChildren: 0.5 }}
+    >
       <div className="image-container">
-        <img src={image} alt="full-stack Engr" />
+        <motion.img variants={imageAnimate} src={image} alt="full-stack Engr" />
       </div>
-      <h1 className="title">{title}</h1>
-      <p className="description">{description}</p>
+      <motion.h1 variants={textAnimate} className="title">
+        {title}
+      </motion.h1>
+      <motion.p variants={textAnimate} className="description">
+        {description}
+      </motion.p>
     </Card>
   );
 };
