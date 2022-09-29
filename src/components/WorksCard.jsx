@@ -1,14 +1,20 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { textAnimate, imageAnimate } from "../animation";
 
 const WorksCard = ({ image, title, description }) => {
   return (
-    <Card>
+    <Card
+      initial="hide"
+      whileInView={"show"}
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ staggerChildren: 0.5 }}
+    >
       <div className="icon-container">
-        <img src={image} alt="choose" />
+        <motion.img variants={imageAnimate} src={image} alt="choose" />
       </div>
-      <h1>{title}</h1>
-      <p>{description}</p>
+      <motion.h1 variants={textAnimate}>{title}</motion.h1>
+      <motion.p variants={textAnimate}>{description}</motion.p>
     </Card>
   );
 };

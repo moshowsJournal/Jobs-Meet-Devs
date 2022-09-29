@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { Hide } from "../styles/Style";
+import { textAnimate } from "../animation";
 import WorksCard from "./WorksCard";
 import CtaButton from "./CtaButton";
 import choose from "../assets/svgs/choose.svg";
@@ -11,9 +11,14 @@ const WorksSection = () => {
   return (
     <Section>
       <Container>
-        <Hide>
-          <h1 className="head">How It Works</h1>
-        </Hide>
+        <motion.div
+          initial="hide"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ staggerChildren: 0.5 }}
+        >
+          <motion.h1 variants={textAnimate} className="head">How It Works</motion.h1>
+        </motion.div>
         <Cards>
           <WorksCard
             image={choose}
