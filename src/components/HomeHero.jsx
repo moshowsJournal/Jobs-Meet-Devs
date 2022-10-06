@@ -69,7 +69,7 @@ const Text = styled(motion.article)`
   }
   p {
     font-family: "Open Sans", sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 2rem 0 4rem;
     color: ${(props) => props.theme.text2};
   }
