@@ -63,6 +63,7 @@ const Container = styled.div`
 const Text = styled(motion.article)`
   h1 {
     font-family: "WhyteInktrap", sans-serif;
+    font-weight: 500;
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
     color: ${(props) => props.theme.primary};

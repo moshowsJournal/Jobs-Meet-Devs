@@ -70,6 +70,7 @@ const Container = styled(motion.div)`
     text-align: center;
     color: ${(props) => props.theme.primary};
     font-size: 2.5rem;
+    font-weight: 500;
     font-family: "WhyteInktrap", sans-serif;
   }
   .subhead {

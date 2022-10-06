@@ -59,6 +59,7 @@ const Text = styled(motion.article)`
   justify-content: center;
   h1 {
     font-family: "WhyteInktrap", sans-serif;
+    font-weight: 500;
     font-size: 2.5rem;
     line-height: 50px;
     color: ${(props) => props.theme.text1};

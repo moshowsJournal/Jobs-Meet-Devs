@@ -9,7 +9,7 @@ const ContactUs = () => {
   return (
     <Section>
       <Container>
-        <h1>We’d love to hear from you</h1>
+        <h1>We'd love to hear from you</h1>
         <FormContainer>
             <form onSubmit={onSubmit}>
                 <div className="form-control">
@@ -45,8 +45,9 @@ const Container = styled.div`
 
   h1 {
     font-size: 2.5rem;
+    font-weight: 500;
     font-family: "WhyteInktrap", sans-serif;
-    color: ${props => props.theme.text1};
+    color: ${(props) => props.theme.text1};
   }
 `;
 

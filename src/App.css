@@ -6,6 +6,13 @@
 }
 
 @font-face {
+    font-family: "WhyteInktrap";
+    src: local("WhyteInktrap"),
+        url("./fonts/WhyteInktrap-Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
     font-family: "GTWalsheimPro";
     src: local("GTWalsheimPro"),
         url("./fonts/GTWalsheimPro-Regular.ttf") format("truetype");
