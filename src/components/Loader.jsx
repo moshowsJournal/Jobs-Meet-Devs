@@ -7,7 +7,7 @@ const Loader = () => {
     <Container>
       <StyledLogo
         animate={{ scale: 60 }}
-        transition={{ delay: 2, duration: 2, ease: [0.6, 0.01, -0.05, 0.9] }}
+        transition={{ delay: 3.5, duration: 2, ease: [0.6, 0.01, -0.05, 0.9] }}
       >
         <motion.div
           animate={{ x: [-250, 0], opacity: [0, 1], rotate: 360 }}

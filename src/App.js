@@ -17,7 +17,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoader(false);
-    }, 2700);
+    }, 4200);
   }, [loader]);
 
   return (
