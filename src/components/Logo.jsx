@@ -33,6 +33,7 @@ const StyledLogo = styled.div`
     }
   }
   .logo-text {
+    font-family: "GTWalsheimPro", sans-serif;
     position: absolute;
     left: 5.8rem;
     display: flex;
