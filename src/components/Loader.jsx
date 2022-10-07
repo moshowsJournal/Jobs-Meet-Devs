@@ -10,7 +10,7 @@ const Loader = () => {
         transition={{ delay: 2, duration: 2, ease: [0.6, 0.01, -0.05, 0.9] }}
       >
         <motion.div
-          animate={{ x: [-750, 0], opacity: [0, 1], rotate: 360 }}
+          animate={{ x: [-250, 0], opacity: [0, 1], rotate: 360 }}
           transition={{duration: 2}}
           className="logo-image"
         >
