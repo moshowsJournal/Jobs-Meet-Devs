@@ -11,14 +11,17 @@ const HomeHero = () => {
         <Text
           initial="hide"
           whileInView={"show"}
-          viewport={{once:true,amount: 0.5}}
+          viewport={{ once: true, amount: 0.5 }}
           transition={{ staggerChildren: 0.5 }}
         >
-          <motion.h1 variants={textAnimate}>
+          {/* <motion.h1 variants={textAnimate}>
             Finding <span>High-Value</span>
           </motion.h1>
           <motion.h1 variants={textAnimate}> Nigerian Tech Talents</motion.h1>
-          <motion.h1 variants={textAnimate}>Just Got Easy</motion.h1>
+          <motion.h1 variants={textAnimate}>Just Got Easy</motion.h1> */}
+          <motion.h1 variants={textAnimate}>
+            Finding <span>High-Value</span> Nigerian Tech Talents Just Got Easy
+          </motion.h1>
           <motion.p variants={textAnimate}>
             Jobs Meet Devs connects companies with top vetted developers,
             designers, product managers, and project managers. Leave the tech
@@ -47,7 +50,7 @@ const Container = styled(motion.div)`
   padding: 2.5rem 0;
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
   article {
-    width: 60%;
+    width:60%;
     min-height: 75vh;
   }
 `;
@@ -58,6 +61,8 @@ const Text = styled(motion.article)`
   flex-direction: column;
   justify-content: center;
   h1 {
+   width: 80%;
+   margin: 0 auto;
     font-family: "WhyteInktrap", sans-serif;
     font-weight: 500;
     font-size: 2.5rem;
