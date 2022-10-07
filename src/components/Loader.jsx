@@ -11,6 +11,7 @@ const Loader = () => {
       >
         <motion.div
           animate={{ x: [-750, 0], opacity: [0, 1], rotate: 360 }}
+          transition={{duration: 2}}
           className="logo-image"
         >
           <img src={logo} alt="logo" />
@@ -18,13 +19,13 @@ const Loader = () => {
         <div className="logo-text">
           <motion.span
             animate={{ y: [-70, 0], opacity: [0, 1] }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 2 }}
           >
             Jobs
           </motion.span>
           <motion.span
             animate={{ y: [70, 0], opacity: [0, 1] }}
-            transition={{ duration: 1.5 }}
+            transition={{ duration: 2.5 }}
           >
             Meet Devs
           </motion.span>
