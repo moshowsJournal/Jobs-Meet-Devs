@@ -14,7 +14,7 @@ const TypeWriterText = () => {
             .typeString(`<span class="secondary">High-Value</span>`)
             .pauseFor(2000)
             .deleteAll()
-            .typeString(`<span class="primary">Industry Ready</span>`)
+            .typeString(`<span class="primary">Industry-Ready</span>`)
             .pauseFor(2000)
             .deleteAll()
             .typeString(`<span class="secondary">Efficient</span>`)
