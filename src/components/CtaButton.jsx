@@ -20,7 +20,7 @@ const Div = styled(motion.div)`
     border-radius: 1rem;
     font-size: 1.1rem;
     font-family: "GTWalsheimPro", sans-serif;
-    color: #fff;
+    color: hsl(0, 0%, 100%);
   }
 `;
 

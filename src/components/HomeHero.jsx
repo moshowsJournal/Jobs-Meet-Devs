@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import CtaButton from "./CtaButton";
 import { textAnimate } from "../animation";
+import TypeWriterText from "./TypeWriterText";
 
 const HomeHero = () => {
   return (
@@ -13,8 +14,8 @@ const HomeHero = () => {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ staggerChildren: 0.5 }}
         >
-          <motion.h1 variants={textAnimate}>
-            Finding <span>High-Value</span>
+          <motion.h1 variants={textAnimate} className="first-head">
+            <span>Finding</span> <TypeWriterText/>
           </motion.h1>
           <motion.h1 variants={textAnimate}> Nigerian Tech Talents</motion.h1>
           <motion.h1 variants={textAnimate}>Just Got Easy</motion.h1>
@@ -63,9 +64,10 @@ const Text = styled(motion.article)`
     font-size: 2.5rem;
     line-height: 50px;
     color: ${(props) => props.theme.text1};
-    span {
-      color: ${(props) => props.theme.secondary};
-    }
+  }
+  .first-head {
+    display: flex;
+    gap: 0.5rem;
   }
   p {
     font-family: "Open Sans", sans-serif;
