@@ -28,7 +28,7 @@ const WorksSection = () => {
           <WorksCard
             image={interview}
             title="Interview hand-picked candidates"
-            description="With more than (put a number) skilled technical professionals at your disposal, easily schedule interviews and meet top professionals that fit within your team."
+            description="With more than 1500 skilled technical professionals at your disposal, easily schedule interviews and meet top professionals that fit within your team."
           />
           <WorksCard
             image={hire}

@@ -14,7 +14,7 @@ const TypeWriterText = () => {
             .typeString(`<span class="secondary">High-Value</span>`)
             .pauseFor(2000)
             .deleteAll()
-            .typeString(`<span class="primary">Industry-Ready</span>`)
+            .typeString(`<span class="secondary">Industry-Ready</span>`)
             .pauseFor(2000)
             .deleteAll()
             .typeString(`<span class="secondary">Efficient</span>`)
@@ -31,9 +31,6 @@ const Span = styled.span`
   font-family: "WhyteInktrap", sans-serif;
   font-weight: 500;
   font-size: 2.5rem;
-  .primary {
-    color: ${(props) => props.theme.primary};
-  }
   .secondary {
     color: ${(props) => props.theme.secondary};
   }
