@@ -11,15 +11,24 @@ const ContactUs = () => {
       <Container>
         <h1>We'd love to hear from you</h1>
         <FormContainer>
-            <form onSubmit={onSubmit}>
-                <div className="form-control">
-                    <input type="text" placeholder="Your Name" id="name"  />
-                    <input type="email" placeholder="Email Address" id="email" />
-                </div>
-                <div className="form-control text">
-                    <textarea name="" id="message" placeholder="Send us a message"></textarea>
-                </div>
-            </form>
+          <form onSubmit={onSubmit}>
+            <div className="form-control">
+              <input type="text" placeholder="Your Name" id="name" />
+              <input type="email" placeholder="Email Address" id="email" />
+            </div>
+            <div className="form-control text">
+              <textarea
+                name=""
+                id="message"
+                placeholder="Send us a message"
+              ></textarea>
+            </div>
+            <div className="submitBtn__container">
+              <button type="submit" className="submitBtn">
+                Send Message
+              </button>
+            </div>
+          </form>
         </FormContainer>
       </Container>
     </Section>
@@ -86,6 +95,23 @@ const FormContainer = styled(motion.div)`
     resize: none;
     width: 100%;
     height: 14rem;
+  }
+
+  .submitBtn__container {
+    width: 100%;
+    text-align: center;
+    margin-top: 1.5rem;
+    .submitBtn {
+      display: inline-block;
+      background-color: ${(props) => props.theme.primary};
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 1rem;
+      font-size: 1.1rem;
+      font-family: "GTWalsheimPro", sans-serif;
+      color: #fff;
+      cursor: pointer;
+    }
   }
 `;
 
