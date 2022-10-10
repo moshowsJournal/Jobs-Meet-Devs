@@ -102,7 +102,7 @@ const FormContainer = styled(motion.div)`
     border-radius: 8px;
     &:focus {
       outline: none;
-      border: 2px solid #333;
+      border: 1px solid #333;
     }
     &::placeholder {
       color: #767b86;

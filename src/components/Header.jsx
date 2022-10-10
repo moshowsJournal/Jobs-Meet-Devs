@@ -2,28 +2,12 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import Logo from "./Logo";
-
-
-const headerAnimation = {
-  hide: {
-    opacity: 0,
-    y: -100,
-  },
-  show: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      type: "spring",
-      bounce: 0.2,
-      duration: 1.5,
-    },
-  },
-};
+import { headerAnimate } from "../animation";
 
 const Header = () => {
   return (
     <MainHeader>
-      <Nav variants={headerAnimation} initial="hide" animate="show">
+      <Nav variants={headerAnimate} initial="hide" animate="show">
         <div>
           <NavLink to="/">
             <Logo />

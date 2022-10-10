@@ -1,13 +1,13 @@
 import BuildSection from "../components/BuildSection";
 import HomeHero from "../components/HomeHero";
-import Partner from "../components/Partner";
+import RecruitmentTime from "../components/RecruitmentTime";
 import WorksSection from "../components/WorksSection";
 
 const Home = () => {
     return (
         <> 
            <HomeHero/>
-           <Partner/>
+           <RecruitmentTime/>
            <BuildSection/>
            <WorksSection/>
         </>
