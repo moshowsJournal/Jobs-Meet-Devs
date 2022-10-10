@@ -1,24 +1,47 @@
+import { useRef } from "react";
+import emailjs from "emailjs-com";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
 const ContactUs = () => {
-    const onSubmit = () =>{
+  const formRef = useRef()
+  const onSubmit = (e) => {
+    e.preventDefault();
 
-    }
+    emailjs
+      .sendForm(
+        "service_qnqm6s9",
+        "template_ka0yyf7",
+        formRef.current,
+        "wW-4RCOHqwPVE7KPO"
+      )
+
+      e.target.reset()
+  };
 
   return (
     <Section>
       <Container>
         <h1>We'd love to hear from you</h1>
         <FormContainer>
-          <form onSubmit={onSubmit}>
+          <form onSubmit={onSubmit} ref={formRef}>
             <div className="form-control">
-              <input type="text" placeholder="Your Name" id="name" />
-              <input type="email" placeholder="Email Address" id="email" />
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                id="name"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                id="email"
+              />
             </div>
             <div className="form-control text">
               <textarea
-                name=""
+                name="message"
                 id="message"
                 placeholder="Send us a message"
               ></textarea>
@@ -71,7 +94,7 @@ const FormContainer = styled(motion.div)`
   input,
   textarea {
     color: #767b86;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-family: "Open Sans", sans-serif;
     padding: 1rem;
     background-color: #f9fafc;
@@ -79,6 +102,7 @@ const FormContainer = styled(motion.div)`
     border-radius: 8px;
     &:focus {
       outline: none;
+      border: 2px solid #333;
     }
     &::placeholder {
       color: #767b86;
@@ -111,6 +135,9 @@ const FormContainer = styled(motion.div)`
       font-family: "GTWalsheimPro", sans-serif;
       color: #fff;
       cursor: pointer;
+      &:active {
+        transform: scale(0.98);
+      }
     }
   }
 `;

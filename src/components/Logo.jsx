@@ -39,6 +39,7 @@ const StyledLogo = styled.div`
     display: flex;
     flex-direction: column;
     span {
+      font-weight: bold;
       color: ${(props) => props.theme.text1};
     }
   }

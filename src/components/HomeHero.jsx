@@ -10,8 +10,7 @@ const HomeHero = () => {
       <Container>
         <Text
           initial="hide"
-          whileInView={"show"}
-          viewport={{ once: true, amount: 0.5 }}
+          animate={"show"}
           transition={{ staggerChildren: 0.5 }}
         >
           <motion.h1 variants={textAnimate} className="first-head">
