@@ -1,8 +1,12 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import CtaButton from "./CtaButton";
-import { textAnimate } from "../animation";
+import { textAnimate, imageAnimate } from "../animation";
 import TypeWriterText from "./TypeWriterText";
+
+import image1 from "../assets/pngs/image1.png"
+import image2 from "../assets/pngs/image2.png"
+
 
 const HomeHero = () => {
   return (
@@ -14,7 +18,7 @@ const HomeHero = () => {
           transition={{ staggerChildren: 0.5 }}
         >
           <motion.h1 variants={textAnimate} className="first-head">
-            <span>Finding</span> <TypeWriterText/>
+            <span>Finding</span> <TypeWriterText />
           </motion.h1>
           <motion.h1 variants={textAnimate}> Nigerian Tech Talents</motion.h1>
           <motion.h1 variants={textAnimate}>Just Got Easy</motion.h1>
@@ -27,6 +31,37 @@ const HomeHero = () => {
             Connect Me
           </CtaButton>
         </Text>
+        <motion.div
+          className="images"
+          initial="hide"
+          animate={"show"}
+          transition={{ staggerChildren: 0.5 }}
+        >
+          <motion.img
+            variants={imageAnimate}
+            src={image1}
+            alt="image1"
+            className="image1"
+          />
+          <motion.img
+            variants={imageAnimate}
+            src={image2}
+            alt="image2"
+            className="image2"
+          />
+          <motion.img
+            variants={imageAnimate}
+            src={image1}
+            alt="image3"
+            className="image3"
+          />
+          <motion.img
+            variants={imageAnimate}
+            src={image2}
+            alt="image1"
+            className="image4"
+          />
+        </motion.div>
       </Container>
     </Section>
   );
@@ -38,6 +73,7 @@ const Section = styled.section`
 `;
 
 const Container = styled(motion.div)`
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,6 +84,31 @@ const Container = styled(motion.div)`
   article {
     width: 60%;
     min-height: 75vh;
+  }
+
+  .images {
+    img {
+      position: absolute;
+    }
+    .image1 {
+      left: 18%;
+      top: 28%;
+    }
+
+    .image2 {
+      right: 18%;
+      top: 28%;
+    }
+
+    .image3 {
+      right: 5%;
+      top: 55%;
+    }
+
+    .image4 {
+      left: 5%;
+      top: 55%;
+    }
   }
 `;
 
