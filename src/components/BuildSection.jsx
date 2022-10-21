@@ -28,26 +28,39 @@ const BuildSection = () => {
           <div className="card">
             <BuildCard
               image={fullStack}
-              title="Full-stacksoftware engineers"
+              title="Software Engineers (Web and Mobile)"
               description="Highly skilled engineers rigorously trained in web, app, and software
           development; front-end, back-end, and development operations."
             />
             <BuildCard
               image={webDevs}
-              title="Web Developers"
+              title="Product Designers"
               description="Get full-stack web developers ready to build your website or update an existing site."
             />
           </div>
           <div className="card">
             <BuildCard
               image={fullStack}
-              title="Full-stacksoftware engineers"
+              title="Product Managers"
               description="Highly skilled engineers rigorously trained in web, app, and software
           development; front-end, back-end, and development operations."
             />
             <BuildCard
               image={webDevs}
-              title="Web Developers"
+              title="Dev'Ops Engineers"
+              description="Get full-stack web developers ready to build your website or update an existing site."
+            />
+          </div>
+          <div className="card">
+            <BuildCard
+              image={fullStack}
+              title="Quality Assurance / Product Tester"
+              description="Highly skilled engineers rigorously trained in web, app, and software
+          development; front-end, back-end, and development operations."
+            />
+            <BuildCard
+              image={webDevs}
+              title="Project Managers"
               description="Get full-stack web developers ready to build your website or update an existing site."
             />
           </div>
@@ -64,7 +77,7 @@ const Section = styled.section`
 const Container = styled(motion.div)`
   width: 85%;
   margin: 0 auto;
-  padding: 3.5rem 0;
+  padding: 3.5rem 0 5rem;
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
   .head {
     text-align: center;
@@ -82,7 +95,7 @@ const Container = styled(motion.div)`
 `;
 
 const Cards = styled(motion.div)`
-  margin-top: 2rem;
+  margin-top: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
