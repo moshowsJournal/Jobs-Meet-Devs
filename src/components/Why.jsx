@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { textAnimate, imageAnimate } from "../animation";
-import convexTech from "../assets/pngs/convexTech.png";
-import group from "../assets/pngs/group.png";
+import qonveyLogo from "../assets/pngs/qonveyLogo.png";
 import testimony from "../assets/pngs/testimony.png";
 
 const Why = () => {
@@ -20,6 +19,14 @@ const Why = () => {
           </motion.h1>
         </motion.div>
         <div className="testimonyContainer">
+          <Image
+            initial="hide"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ staggerChildren: 0.5 }}
+          >
+            <motion.img variants={imageAnimate} src={qonveyLogo} alt="qonveyLogo" />
+          </Image>
           <Testimony
             initial="hide"
             whileInView={"show"}
@@ -32,18 +39,7 @@ const Why = () => {
             <motion.div variants={textAnimate}>
               <img src={testimony} alt="testimony" className="testimony" />
             </motion.div>
-            <motion.div variants={textAnimate}>
-              <img src={convexTech} alt="convexTech" />
-            </motion.div>
           </Testimony>
-          <Image
-            initial="hide"
-            whileInView={"show"}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ staggerChildren: 0.5 }}
-          >
-            <motion.img variants={imageAnimate} src={group} alt="group" />
-          </Image>
         </div>
       </Container>
     </Section>
@@ -58,7 +54,7 @@ const Section = styled.section`
 const Container = styled.div`
   width: 85%;
   margin: 0 auto;
-  padding: 3.5rem 0;
+  padding: 3.5rem 0 2.5rem;
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
   .head {
     padding-bottom: 3.5rem;
@@ -70,9 +66,9 @@ const Container = styled.div`
   }
   .testimonyContainer {
     display: flex;
-    gap: 6%;
+    justify-content: center;
     article {
-      width: 47%;
+      width: 45%;
     }
   }
 `;
@@ -93,6 +89,7 @@ const Testimony = styled(motion.article)`
 const Image = styled(motion.article)`
   img {
     width: 100%;
+    height: 19rem;
   }
 `;
 
