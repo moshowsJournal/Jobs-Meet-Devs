@@ -24,8 +24,8 @@ const BuildCard = ({ image, title, description }) => {
 };
 
 const Card = styled(motion.article)`
-  width: 28rem;
-  height: 29.5rem;
+  width: 31%;
+  height: 25rem;
   padding: 2rem;
   border: 1px solid #e7e9eb;
   border-radius: 8px;
@@ -35,7 +35,7 @@ const Card = styled(motion.article)`
     }
   }
   .title {
-    margin-top: 4rem;
+    margin-top: 2rem;
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
     font-size: 1.5rem;

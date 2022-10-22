@@ -70,12 +70,12 @@ const Video = styled(motion.article)`
 const Text = styled(motion.article)`
   h1 {
     span {
-      font-size: 2.2rem;
-      font-family: "Open Sans", sans-serif;
-      font-weight: 600;
-      color: ${props => props.theme.text1};
+      font-size: 1.8rem;
+      font-family: "WhyteInktrap", sans-serif;
+      color: ${(props) => props.theme.text1};
       display: inline-block;
       margin-right: 0.4rem;
+      margin-bottom: 0.8rem;
     }
   }
 `;

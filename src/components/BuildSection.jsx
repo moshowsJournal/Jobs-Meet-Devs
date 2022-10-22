@@ -35,23 +35,20 @@ const BuildSection = () => {
             <BuildCard
               image={webDevs}
               title="Product Designers"
-              description="Get full-stack web developers ready to build your website or update an existing site."
+              description="We'll introduce you to the best talent for your business. Each talent in our pool is vetted for their expertise, professionalism, and communication skills."
             />
-          </div>
-          <div className="card">
             <BuildCard
               image={fullStack}
               title="Product Managers"
-              description="Highly skilled engineers rigorously trained in web, app, and software
-          development; front-end, back-end, and development operations."
+              description="We'll introduce you to the best talent for your business. Each talent in our pool is vetted for their expertise, professionalism, and communication skills."
             />
+          </div>
+          <div className="card">
             <BuildCard
               image={webDevs}
               title="Dev'Ops Engineers"
               description="Get full-stack web developers ready to build your website or update an existing site."
             />
-          </div>
-          <div className="card">
             <BuildCard
               image={fullStack}
               title="Quality Assurance / Product Tester"
@@ -95,6 +92,7 @@ const Container = styled(motion.div)`
 `;
 
 const Cards = styled(motion.div)`
+  width: 100%;
   margin-top: 3rem;
   display: flex;
   flex-direction: column;
@@ -103,7 +101,7 @@ const Cards = styled(motion.div)`
   gap: 2.5rem;
   .card {
     display: flex;
-    gap: 2rem;
+    gap: 3.3%;
   }
 `;
 
