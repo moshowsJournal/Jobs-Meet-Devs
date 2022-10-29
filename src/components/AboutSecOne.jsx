@@ -1,22 +1,27 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { textAnimate } from "../animation";
 import groupPic from "../assets/pngs/groupPic.png";
 
 const AboutSecOne = () => {
   return (
     <Section>
-      <Container>
+      <Container
+        initial="hide"
+        animate={"show"}
+        transition={{ staggerChildren: 0.5 }}
+      >
         <Text>
           <div>
-            <h1>
+            <motion.h1 variants={textAnimate}>
               We want to bridge the gap between Nigerian talents & employers on
               the global scale by equipping them with battle-tested job
               acquisition & project-crushing skills.
-            </h1>
+            </motion.h1>
           </div>
         </Text>
         <Image>
-          <img src={groupPic} alt="groupPic" />
+          <motion.img variants={textAnimate} src={groupPic} alt="groupPic" />
         </Image>
       </Container>
     </Section>
@@ -28,13 +33,13 @@ const Section = styled.section`
   width: 100%;
 `;
 
-const Container = styled.div`
+const Container = styled(motion.div)`
   width: 85%;
   margin: 0 auto;
   padding: 4rem 0;
 `;
 
-const Text = styled.article`
+const Text = styled(motion.article)`
   margin-bottom: 4rem;
   width: 100%;
   div {
@@ -49,7 +54,7 @@ const Text = styled.article`
     }
   }
 `;
-const Image = styled.article`
+const Image = styled(motion.article)`
   width: 100%;
   img {
     width: 100%;
