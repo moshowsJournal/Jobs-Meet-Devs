@@ -11,6 +11,7 @@ import Community from "./pages/Community";
 import ContactUs from "./pages/ContactUs";
 import Footer from "./components/Footer";
 import Loader from './components/Loader';
+import ScrollTop from './components/ScrollTop';
 
 function App() {
   const [loader, setLoader] = useState(true)
@@ -23,6 +24,7 @@ function App() {
   return (
     <div className="App">
       <GlobalStyles />
+      <ScrollTop/>
       <ThemeProvider theme={colors}>
         {loader ? (
           <Loader />

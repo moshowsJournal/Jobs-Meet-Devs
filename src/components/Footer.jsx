@@ -6,54 +6,70 @@ import {
   AiOutlineTwitter,
 } from "react-icons/ai";
 import { motion } from "framer-motion";
+import { textAnimate } from "../animation";
 
 const Footer = () => {
   return (
     <StyledFooter>
       <Container>
         <Links>
-          <div>
-            <h3>Company</h3>
-            <p>
+          <motion.div
+            initial="hide"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ staggerChildren: 0.3 }}
+          >
+            <motion.h3 variants={textAnimate}>Company</motion.h3>
+            <motion.p variants={textAnimate}>
               <Link to="/about-us">About Us</Link>
-            </p>
-            <p>
+            </motion.p>
+            <motion.p variants={textAnimate}>
               <Link to="/community">Community</Link>
-            </p>
-          </div>
-          <div>
-            <h3>Contact</h3>
+            </motion.p>
+          </motion.div>
+          <motion.div
+            initial="hide"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ staggerChildren: 0.3 }}
+          >
+            <motion.h3 variants={textAnimate}>Contact</motion.h3>
             <div>
-              <a
+              <motion.a
+                variants={textAnimate}
                 href="http://www.twitter.com/jobsmeetdevs?s=11&t=2eZBYvWDMnMMq7GswVbvqg"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <AiOutlineTwitter fill="#fff" size="1.4rem" />
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                variants={textAnimate}
                 href="http://www.linkedin.com/company/jobs-meet-devs/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <AiFillLinkedin fill="#fff" size="1.4rem" />
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                variants={textAnimate}
                 href="http://www.instagram.com/jobsmeetdevs?igshid=YmMyMTA2M2Y="
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <AiOutlineInstagram fill="#fff" size="1.4rem" />
-              </a>
+              </motion.a>
             </div>
-          </div>
+          </motion.div>
         </Links>
-        <Line>
-        </Line>
-        <CopyRight>
-          <p>
-           Copyright &copy; Jobs Meet Devs
-          </p>
+        <Line></Line>
+        <CopyRight
+          initial="hide"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ staggerChildren: 0.3 }}
+        >
+          <motion.p variants={textAnimate}>Copyright &copy; Jobs Meet Devs</motion.p>
         </CopyRight>
       </Container>
     </StyledFooter>
