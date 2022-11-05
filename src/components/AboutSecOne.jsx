@@ -1,26 +1,52 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { textAnimate } from "../animation";
+import { textAnimate, wordAnimate } from "../animation";
 import groupPic from "../assets/pngs/groupPic.png";
 
 const AboutSecOne = () => {
   return (
     <Section>
-      <Container
-        initial="hide"
-        animate={"show"}
-        transition={{ staggerChildren: 0.5 }}
-      >
+      <Container>
         <Text>
           <div>
-            <motion.h1 variants={textAnimate}>
-              We want to bridge the gap between Nigerian talents & employers on
-              the global scale by equipping them with battle-tested job
-              acquisition & project-crushing skills.
+            <motion.h1
+              initial="hide"
+              animate={"show"}
+              transition={{ staggerChildren: 0.2 }}
+            >
+              <motion.span variants={wordAnimate}>We</motion.span>
+              <motion.span variants={wordAnimate}>want</motion.span>
+              <motion.span variants={wordAnimate}>to</motion.span>
+              <motion.span variants={wordAnimate}>bridge</motion.span>
+              <motion.span variants={wordAnimate}>the</motion.span>
+              <motion.span variants={wordAnimate}>gap</motion.span>
+              <motion.span variants={wordAnimate}>between</motion.span>
+              <motion.span variants={wordAnimate}>Nigerian</motion.span>
+              <motion.span variants={wordAnimate}>talents</motion.span>
+              <motion.span variants={wordAnimate}>&</motion.span>
+              <motion.span variants={wordAnimate}>employers</motion.span>
+              <motion.span variants={wordAnimate}>on</motion.span>
+              <motion.span variants={wordAnimate}>the</motion.span>
+              <motion.span variants={wordAnimate}>global</motion.span>
+              <motion.span variants={wordAnimate}>scale</motion.span>
+              <motion.span variants={wordAnimate}>by</motion.span>
+              <motion.span variants={wordAnimate}>equipping</motion.span>
+              <motion.span variants={wordAnimate}>them</motion.span>
+              <motion.span variants={wordAnimate}>with</motion.span>
+              <motion.span variants={wordAnimate}>battle-tested</motion.span>
+              <motion.span variants={wordAnimate}>job</motion.span>
+              <motion.span variants={wordAnimate}>acquisition</motion.span>
+              <motion.span variants={wordAnimate}>&</motion.span>
+              <motion.span variants={wordAnimate}>project-crushing</motion.span>
+              <motion.span variants={wordAnimate}>skills</motion.span>
             </motion.h1>
           </div>
         </Text>
-        <Image>
+        <Image
+          initial="hide"
+          animate={"show"}
+          transition={{ delay: 1 }}
+        >
           <motion.img variants={textAnimate} src={groupPic} alt="groupPic" />
         </Image>
       </Container>
@@ -51,6 +77,15 @@ const Text = styled(motion.article)`
       font-weight: 500;
       font-size: 2.5rem;
       line-height: 50px;
+      span {
+        display: inline-block;
+        margin-right: 0.5rem;
+        color: ${(props) => props.theme.text1};
+      font-family: "WhyteInktrap", sans-serif;
+      font-weight: 500;
+      font-size: 2.5rem;
+      line-height: 50px;
+      }
     }
   }
 `;
