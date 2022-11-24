@@ -47,6 +47,10 @@ const Card = styled(motion.article)`
     font-family: "GTWalsheimPro", sans-serif;
     color: ${(props) => props.theme.primary};
   }
+
+  @media screen and (max-width: 40rem) {
+    width: 100%;
+  }
 `;
 
 export default BuildCard;

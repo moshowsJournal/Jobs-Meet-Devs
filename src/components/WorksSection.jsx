@@ -58,6 +58,14 @@ const Container = styled(motion.div)`
     font-weight: 500;
     font-family: "WhyteInktrap", sans-serif;
   }
+
+  @media screen and (max-width: 40rem) {
+    width: 90%;
+
+    .head {
+      font-size: 1.8rem;
+    }
+  }
 `;
 
 const Cards = styled(motion.div)`
@@ -66,5 +74,9 @@ const Cards = styled(motion.div)`
   justify-content: center;
   align-items: center;
   gap: 2rem;
+
+  @media screen and (max-width: 40rem) {
+    flex-direction: column;
+  }
 `;
 export default WorksSection;

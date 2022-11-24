@@ -82,12 +82,19 @@ const StyledFooter = styled.footer`
   color: #fff;
   background-color: ${(props) => props.theme.primary};
   font-family: "GTWalsheimPro", sans-serif;
+  @media screen and (max-width: 40rem) {
+    min-height: 30vh;
+  }
 `;
 
 const Container = styled.div`
   width: 85%;
   margin: 0 auto;
   padding: 3rem 0;
+
+  @media screen and (max-width: 40rem) {
+    width: 90%;
+  }
 `;
 
 const Links = styled.article`
@@ -120,6 +127,10 @@ const Links = styled.article`
         }
       }
     }
+  }
+
+  @media screen and (max-width: 40rem) {
+    width: 80%;
   }
 `;
 

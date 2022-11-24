@@ -110,6 +110,30 @@ const Container = styled(motion.div)`
       top: 55%;
     }
   }
+
+  @media screen and (max-width: 40rem) {
+    width: 90%;
+    .images {
+      .image1 {
+        top: 8%;
+      }
+
+      .image2 {
+        top: 8%;
+      }
+
+      .image3 {
+        top: 90%;
+      }
+
+      .image4 {
+        top: 90%;
+      }
+    }
+    article {
+      width: 100%;
+    }
+  }
 `;
 
 const Text = styled(motion.article)`
@@ -134,6 +158,15 @@ const Text = styled(motion.article)`
     font-size: 1.1rem;
     margin: 2rem 0 4rem;
     color: ${(props) => props.theme.text2};
+  }
+
+  @media screen and (max-width: 40rem) {
+    h1 {
+      font-size: 1.8rem;
+    }
+    p {
+      font-size: 1rem;
+    }
   }
 `;
 

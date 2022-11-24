@@ -43,6 +43,16 @@ const StyledLogo = styled.div`
       color: ${(props) => props.theme.text1};
     }
   }
+
+  @media screen and (max-width: 40rem) {
+    .logo-image {
+      width: 7.5rem;
+    }
+
+    .logo-text {
+      left: 5.4rem;
+    }
+  }
 `;
 
 export default Logo;

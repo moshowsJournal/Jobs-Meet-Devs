@@ -34,6 +34,10 @@ const Span = styled.span`
   .secondary {
     color: ${(props) => props.theme.secondary};
   }
+
+  @media screen and (max-width: 40rem) {
+    font-size: 1.8rem;
+  }
 `;
 
 export default TypeWriterText;

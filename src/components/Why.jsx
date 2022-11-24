@@ -71,6 +71,21 @@ const Container = styled.div`
       width: 45%;
     }
   }
+
+  @media screen and (max-width: 40rem) {
+    width: 90%;
+
+    .head {
+      font-size: 1.8rem;
+    }
+
+    .testimonyContainer {
+      flex-direction: column;
+      article {
+        width: 100%;
+      }
+    }
+  }
 `;
 
 const Testimony = styled(motion.article)`
@@ -90,6 +105,12 @@ const Image = styled(motion.article)`
   img {
     width: 100%;
     height: 19rem;
+  }
+
+  @media screen and (max-width: 40rem) {
+    img {
+      height: 21rem;
+    }
   }
 `;
 

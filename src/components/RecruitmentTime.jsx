@@ -60,6 +60,15 @@ const Container = styled(motion.div)`
   article {
     width: 47%;
   }
+
+  @media screen and (max-width: 40rem) {
+    width: 90%;
+    flex-direction: column;
+    gap: 2rem;
+    article {
+      width:100%;
+    }
+  }
 `;
 
 const Video = styled(motion.article)`

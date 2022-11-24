@@ -35,6 +35,11 @@ const Header = () => {
             </NavLink>
           </li>
         </NavList>
+        <MenuBar>
+          <span></span>
+          <span></span>
+          <span></span>
+        </MenuBar>
       </Nav>
     </MainHeader>
   );
@@ -61,6 +66,10 @@ const Nav = styled(motion.nav)`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 40rem) {
+  width: 90%;
+  } 
 `;
 
 const NavList = styled.ul`
@@ -75,6 +84,52 @@ const NavList = styled.ul`
         color: ${(props) => props.theme.primary};
       }
     }
+  }
+
+  @media screen and (max-width: 40rem) {
+    display: none;
+  }
+`;
+
+const MenuBar = styled.div`
+  display: none;
+  z-index: 50;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  span {
+    background-color: ${(props) => props.theme.primary};
+    display: block;
+    width: 28px;
+    height: 2px;
+    border-radius: 9999px;
+    transition: all 0.3s ease-in-out;
+    &:not(:last-child) {
+      margin-bottom: 7px;
+    }
+  }
+  &.active {
+    transition-delay: 0.8s;
+    transform: rotate(45deg);
+    span {
+      background-color: #fff;
+    }
+    span:nth-child(2) {
+      width: 0;
+    }
+    span:nth-child(1),
+    span:nth-child(3) {
+      transition-delay: 0.4s;
+    }
+    span:nth-child(1) {
+      transform: translateY(9px);
+    }
+    span:nth-child(3) {
+      transform: translateY(-9px) rotate(90deg);
+    }
+  }
+
+  @media screen and (max-width: 40rem) {
+    display: block;
   }
 `;
 

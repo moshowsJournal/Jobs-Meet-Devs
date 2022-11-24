@@ -89,6 +89,15 @@ const Container = styled(motion.div)`
     color: ${(props) => props.theme.text2};
     font-family: "Open Sans", sans-serif;
   }
+
+  @media screen and (max-width: 40rem) {
+    width: 90%;
+
+    .head {
+      font-size: 1.8rem;
+    }
+    
+  }
 `;
 
 const Cards = styled(motion.div)`
@@ -102,6 +111,13 @@ const Cards = styled(motion.div)`
   .card {
     display: flex;
     gap: 3.3%;
+  }
+
+  @media screen and (max-width: 40rem) {
+    .card {
+      flex-direction: column;
+      gap: 2.5rem;
+    }
   }
 `;
 
