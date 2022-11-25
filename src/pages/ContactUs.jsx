@@ -81,6 +81,13 @@ const Container = styled.div`
     font-family: "WhyteInktrap", sans-serif;
     color: ${(props) => props.theme.text1};
   }
+
+  @media screen and (max-width: 40rem) {
+    width:90%;
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
 `;
 
 const FormContainer = styled(motion.div)`
@@ -138,6 +145,20 @@ const FormContainer = styled(motion.div)`
       &:active {
         transform: scale(0.98);
       }
+    }
+  }
+
+  @media screen and (max-width: 40rem) {
+    width: 100%;
+
+    .form-control {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    #name,
+    #email {
+      width: 100%;
     }
   }
 `;
