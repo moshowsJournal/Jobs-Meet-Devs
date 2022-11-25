@@ -69,7 +69,7 @@ const Footer = () => {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ staggerChildren: 0.3 }}
         >
-          <motion.p variants={textAnimate}>Copyright &copy; Jobs Meet Devs</motion.p>
+          <motion.p variants={textAnimate}>Copyright &copy; 2022 Jobs Meet Devs</motion.p>
         </CopyRight>
       </Container>
     </StyledFooter>
