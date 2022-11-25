@@ -1,10 +1,22 @@
+import {useState} from "react"
 import styled from "styled-components";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import Logo from "./Logo";
+import MobileNav from "./MobileNav";
 import { headerAnimate } from "../animation";
 
 const Header = () => {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const mobileNavHandler = () => {
+    setMobileOpen(!mobileOpen);
+  };
+
+  mobileOpen
+    ? document.body.classList.add("fixed")
+    : document.body.classList.remove("fixed");
+
   return (
     <MainHeader>
       <Nav variants={headerAnimate} initial="hide" animate="show">
@@ -35,11 +47,14 @@ const Header = () => {
             </NavLink>
           </li>
         </NavList>
-        <MenuBar>
+        <MenuBar className={mobileOpen && "active"} onClick={mobileNavHandler}>
           <span></span>
           <span></span>
           <span></span>
         </MenuBar>
+        <AnimatePresence>
+          {mobileOpen && <MobileNav setMobileOpen={setMobileOpen} />}
+        </AnimatePresence>
       </Nav>
     </MainHeader>
   );
