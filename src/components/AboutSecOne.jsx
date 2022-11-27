@@ -42,11 +42,7 @@ const AboutSecOne = () => {
             </motion.h1>
           </div>
         </Text>
-        <Image
-          initial="hide"
-          animate={"show"}
-          transition={{ delay: 1 }}
-        >
+        <Image initial="hide" animate={"show"} transition={{ delay: 1 }}>
           <motion.img variants={textAnimate} src={groupPic} alt="groupPic" />
         </Image>
       </Container>
@@ -63,6 +59,10 @@ const Container = styled(motion.div)`
   width: 85%;
   margin: 0 auto;
   padding: 4rem 0;
+
+  @media screen and (max-width: 40rem) {
+    width: 90%;
+  }
 `;
 
 const Text = styled(motion.article)`
@@ -72,26 +72,34 @@ const Text = styled(motion.article)`
     width: 65%;
     margin: 0 auto;
     h1 {
-      color: ${(props) => props.theme.text1};
-      font-family: "WhyteInktrap", sans-serif;
-      font-weight: 500;
-      font-size: 2.5rem;
-      line-height: 50px;
       span {
         display: inline-block;
         margin-right: 0.5rem;
         color: ${(props) => props.theme.text1};
-      font-family: "WhyteInktrap", sans-serif;
-      font-weight: 500;
-      font-size: 2.5rem;
-      line-height: 50px;
+        font-family: "WhyteInktrap", sans-serif;
+        font-weight: 500;
+        font-size: 2.5rem;
+        line-height: 50px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 40rem) {
+    div {
+      width: 100%;
+      h1 {
+        span {
+          font-size: 1.8rem;
+        }
       }
     }
   }
 `;
+
 const Image = styled(motion.article)`
   width: 100%;
   img {
+    object-fit: cover;
     width: 100%;
   }
 `;
