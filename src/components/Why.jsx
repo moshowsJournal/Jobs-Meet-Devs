@@ -99,6 +99,13 @@ const Testimony = styled(motion.article)`
     width: 100%;
     margin-bottom: 1.5rem;
   }
+
+   @media screen and (max-width: 40rem) {
+    h2 {
+      font-size: 1.4rem;
+      text-align: center;
+    }
+  }
 `;
 
 const Image = styled(motion.article)`

@@ -74,7 +74,7 @@ const MobileNavSection = styled(motion.section)`
   align-items: center;
   nav {
     width: 30vw;
-    height: 60vh;
+    height: 55vh;
   }
 `;
 
@@ -90,7 +90,7 @@ const MobileNavList = styled.ul`
     a {
         color: #fff;
       font-family: "GTWalsheimPro", sans-serif;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
     }
   }
 `;
